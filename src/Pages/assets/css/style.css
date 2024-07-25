@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background: #dddddd;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #05408d;
+  padding: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header nav {
+  width: 90%;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  gap: 20px;
+}
+header nav ul li {
+  display: flex;
+  flex: auto;
+}
+header nav ul li a {
+  flex: auto;
+  background: #0550b1;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 50px;
+}
+
+main {
+  padding: 100px 10%;
+}
+main form label {
+  display: block;
+  margin-bottom: 10px;
+}
+main form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+main form select {
+  min-width: 40%;
+  margin-bottom: 10px;
+}
+main form input, main form select {
+  padding: 10px 20px;
+}
+main form button {
+  display: block;
+  margin-bottom: 15px;
+  background: #05408d;
+  color: #fff;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main table {
+  width: 100%;
+}
+main table td input, main table td button, main table td select {
+  width: 100%;
+  min-width: 200px;
+  padding: 10px 20px;
+}
+main table td button {
+  display: block;
+  background: #05408d;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main table td button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.container-table {
+  width: 100%;
+  overflow: auto;
+  padding: 50px 10px 10px 10px;
+}
+
+.tela-de-login {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

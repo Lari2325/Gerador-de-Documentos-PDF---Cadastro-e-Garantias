@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d4d4d4;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdf {
+    display: flex;
+    flex-direction: column;
+}
+.page {
+    width: 23cm;
+    height: 27.91cm;
+    padding: 1cm;
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
+
+#downloadBtn {
+    display: block;
+    margin-bottom: 15px;
+    background: #05408d;
+    color: #fff;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
+}

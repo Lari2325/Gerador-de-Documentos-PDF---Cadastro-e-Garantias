@@ -1,0 +1,54 @@
+CREATE TABLE tb_admin (
+  id_admin INT(11) NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  usuario VARCHAR(50) NOT NULL,
+  senha VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_admin),
+  UNIQUE KEY usuario (usuario)
+);
+
+CREATE TABLE tb_cliente (
+  id_cliente INT(11) NOT NULL AUTO_INCREMENT,
+  nome_completo VARCHAR(100) NOT NULL,
+  cpf VARCHAR(11) NOT NULL,
+  rg VARCHAR(20) NOT NULL,
+  endereco VARCHAR(255) NOT NULL,
+  cidade VARCHAR(100) NOT NULL,
+  uf CHAR(2) NOT NULL,
+  cep VARCHAR(8) NOT NULL,
+  celular_telefone VARCHAR(15) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  dt_nascimento DATE NOT NULL,
+  estado_civil VARCHAR(20) NOT NULL,
+  numero_casa VARCHAR(20) DEFAULT NULL,
+  PRIMARY KEY (id_cliente),
+  UNIQUE KEY cpf (cpf),
+  UNIQUE KEY rg (rg),
+  UNIQUE KEY email (email)
+);
+
+CREATE TABLE tb_documento (
+  id_documento INT(11) NOT NULL AUTO_INCREMENT,
+  data_compra DATE NOT NULL,
+  data_instalacao DATE NOT NULL,
+  numero_garantia VARCHAR(50) NOT NULL,
+  id_cliente INT(11) NOT NULL,
+  id_revendedor INT(11) NOT NULL,
+  id_piscina INT(11) NOT NULL,
+  PRIMARY KEY (id_documento),
+  FOREIGN KEY (id_cliente) REFERENCES tb_cliente(id_cliente),
+  FOREIGN KEY (id_revendedor) REFERENCES tb_revendedor(id_revendedor),
+  FOREIGN KEY (id_piscina) REFERENCES tb_piscina(id_piscina)
+);
+
+CREATE TABLE tb_piscina (
+  id_piscina INT(11) NOT NULL AUTO_INCREMENT,
+  modelo_piscina VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_piscina)
+);
+
+CREATE TABLE tb_revendedor (
+  id_revendedor INT(11) NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_revendedor)
+);
